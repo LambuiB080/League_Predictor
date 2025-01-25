@@ -35,19 +35,18 @@ Proces ten jest powtarzany wielokrotnie, a każdy kolejny model stara się popra
 Ostateczny wynik to suma wkładów wszystkich modeli.
 
 
+
+
     _Zalety:_ 
-
     + Prosty do zrozumienia i interpretacji.
-
     + Działa dobrze przy ograniczonej liczbie cech.
-
     + Szybki w implementacji.
 
     _Wady:_
-
     + Zakłada liniową zależność między cechami a logarytmem prawdopodobieństwa, co nie zawsze jest prawdziwe.
-
     + Wrażliwy na brakujące dane i silnie skorelowane cechy.
+
+
 
 
 _Random Tree Forest_ - Został wybrany jako rozwiązanie tego problemu.
