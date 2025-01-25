@@ -39,13 +39,13 @@ Wyniki nowego modelu są dodawane do poprzedniego modelu, ale z pewnym "współc
 Proces ten jest powtarzany wielokrotnie, a każdy kolejny model stara się poprawić błędy poprzedniego.
 Ostateczny wynik to suma wkładów wszystkich modeli.
 
-      _Zalety_:
+    _Zalety_:
 
     + Bardzo wysoka dokładność, szczególnie dla dużych i złożonych danych.
 
     + Radzi sobie z nieliniowymi zależnościami między danymi.
 
-      _Wady_:
+    _Wady_:
 
     + Wysokie zapotrzebowanie na moc obliczeniową, szczególnie przy dużych danych.
 
