@@ -17,14 +17,14 @@ Model regresji logistycznej jest uczony na danych historycznych. Proces ten pole
 
 + optymalizacji: Algorytm iteracyjnie aktualizuje wagi, aby minimalizować funkcję kosztu.
 
-    _Zalety:_ 
-    + Prosty do zrozumienia i interpretacji.
-    + Działa dobrze przy ograniczonej liczbie cech.
-    + Szybki w implementacji.
+#### Zalety:
+- Prosty do zrozumienia i interpretacji.
+- Działa dobrze przy ograniczonej liczbie cech.
+- Szybki w implementacji.
 
-    _Wady:_
-    + Zakłada liniową zależność między cechami a logarytmem prawdopodobieństwa, co nie zawsze jest prawdziwe.
-    + Wrażliwy na brakujące dane i silnie skorelowane cechy.
+#### Wady:
+- Zakłada liniową zależność między cechami a logarytmem prawdopodobieństwa, co nie zawsze jest prawdziwe.
+- Wrażliwy na brakujące dane i silnie skorelowane cechy.
 
 _Gradient Boosting_ - Gradient boosting polega na budowaniu kolejnych modeli iteracyjnie, które poprawiają błędy poprzednich modeli.
 W każdym kroku obliczany jest błąd aktualnego modelu (czyli różnica między prawdziwą wartością a wartością przewidywaną).
@@ -34,23 +34,14 @@ Wyniki nowego modelu są dodawane do poprzedniego modelu, ale z pewnym "współc
 Proces ten jest powtarzany wielokrotnie, a każdy kolejny model stara się poprawić błędy poprzedniego.
 Ostateczny wynik to suma wkładów wszystkich modeli.
 
-
-###  Zalety:
-
-    + Bardzo wysoka dokładność, szczególnie dla dużych i złożonych danych.
-
-    + Radzi sobie z nieliniowymi zależnościami między danymi.
+####  Zalety:
+- Bardzo wysoka dokładność, szczególnie dla dużych i złożonych danych.
+- Radzi sobie z nieliniowymi zależnościami między danymi.
 
 #### Wady:
-
-    + Wysokie zapotrzebowanie na moc obliczeniową, szczególnie przy dużych danych.
-
-    + Wymaga strojenia wielu hiperparametrów.
-
-    + Modele są trudne do interpretacji, ponieważ składają się z wielu małych modeli.
-
-
-
+- Wysokie zapotrzebowanie na moc obliczeniową, szczególnie przy dużych danych.
+- Wymaga strojenia wielu hiperparametrów.
+- Modele są trudne do interpretacji, ponieważ składają się z wielu małych modeli.
 
 _Random Tree Forest_ - Został wybrany jako rozwiązanie tego problemu.
 Wybrana koncepcja nosi nazwę Random Forestx (Lasy Losowe). Metoda polega na budowaniu drzew decyzyjnych. Drzewa decyzyjne reprezentują schematycznie proces podejmowania decyzji
