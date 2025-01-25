@@ -17,7 +17,9 @@ Optymalizacja: Algorytm iteracyjnie aktualizuje wagi, aby minimalizować funkcj�
 _Zalety:_ 
 
 Prosty do zrozumienia i interpretacji.
+
 Działa dobrze przy ograniczonej liczbie cech.
+
 Szybki w implementacji.
 
 _Wady:_
