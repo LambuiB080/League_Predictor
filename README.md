@@ -22,6 +22,10 @@ _Zalety:_
 + Działa dobrze przy ograniczonej liczbie cech.
 + Szybki w implementacji.
 
+_Wady:_
++ Zakłada liniową zależność między cechami a logarytmem prawdopodobieństwa, co nie zawsze jest prawdziwe.
++ Wrażliwy na brakujące dane i silnie skorelowane cechy.
+
 _Gradient Boosting_ - Gradient boosting polega na budowaniu kolejnych modeli iteracyjnie, które poprawiają błędy poprzednich modeli.
 W każdym kroku obliczany jest błąd aktualnego modelu (czyli różnica między prawdziwą wartością a wartością przewidywaną).
 W każdym kroku tworzony jest też nowy model, który próbuje przewidzieć pozostały błąd poprzedniego modelu.
