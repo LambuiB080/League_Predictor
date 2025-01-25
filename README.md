@@ -14,7 +14,7 @@ Przypisywaniu wag: Na początku wagi są losowe, ale podczas uczenia algorytm do
 Funkcji kosztu: Regresja logistyczna korzysta z funkcji entropii krzyżowej, aby ocenić różnicę między przewidywanymi a rzeczywistymi wynikami.
 Optymalizacja: Algorytm iteracyjnie aktualizuje wagi, aby minimalizować funkcję kosztu.
 
-  _Zalety:_ 
+    _Zalety:_ 
 
 Prosty do zrozumienia i interpretacji.
 
@@ -22,7 +22,7 @@ Działa dobrze przy ograniczonej liczbie cech.
 
 Szybki w implementacji.
 
-  _Wady:_
+    _Wady:_
 
 Zakłada liniową zależność między cechami a logarytmem prawdopodobieństwa, co nie zawsze jest prawdziwe.
 
