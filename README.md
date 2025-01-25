@@ -39,6 +39,7 @@ Wyniki nowego modelu są dodawane do poprzedniego modelu, ale z pewnym "współc
 Proces ten jest powtarzany wielokrotnie, a każdy kolejny model stara się poprawić błędy poprzedniego.
 Ostateczny wynik to suma wkładów wszystkich modeli.
 
+
     _Zalety:_ 
 
     + Prosty do zrozumienia i interpretacji.
