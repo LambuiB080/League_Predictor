@@ -1,7 +1,7 @@
 **1. Opis rzeczywistego problemu.**
 
-Projekt League_Predictor będzie skupiał się na przewidywaniu meczy ligi angielskiej Premier League. W projekcie zostanie utworzony model który będzie przewidywał mecze na podstawie wcześniejszych
-statystyk poszczególnych zespołów takich jak forma drużyny, średnie gole, średnie żółte kartki, czy celny strzały na bramke. Wyynikiem będzie prawdopodobieństwo na dany rezultat meczu. 
+Projekt League_Predictor skupia się na przewidywaniu meczy ligi angielskiej Premier League. W projekcie utworzony został model przewidujący mecze na podstawie wcześniejszych
+statystyk poszczególnych zespołów takich jak forma drużyny, średnie gole, średnie żółte kartki, czy celne strzały na bramke. Wynikiem jest prawdopodobieństwo rezultatu danego meczu. 
 Projekt może posłużyć do pomocy w obstawianiu zakładów bukmacherskich.
 
 **2. State of Art**
