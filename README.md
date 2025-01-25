@@ -14,7 +14,7 @@ Przypisywaniu wag: Na początku wagi są losowe, ale podczas uczenia algorytm do
 Funkcji kosztu: Regresja logistyczna korzysta z funkcji entropii krzyżowej, aby ocenić różnicę między przewidywanymi a rzeczywistymi wynikami.
 Optymalizacja: Algorytm iteracyjnie aktualizuje wagi, aby minimalizować funkcję kosztu.
 
-_Zalety:_ 
+  _Zalety:_ 
 
 Prosty do zrozumienia i interpretacji.
 
@@ -22,7 +22,7 @@ Działa dobrze przy ograniczonej liczbie cech.
 
 Szybki w implementacji.
 
-_Wady:_
+  _Wady:_
 
 Zakłada liniową zależność między cechami a logarytmem prawdopodobieństwa, co nie zawsze jest prawdziwe.
 
@@ -36,13 +36,13 @@ Wyniki nowego modelu są dodawane do poprzedniego modelu, ale z pewnym "współc
 Proces ten jest powtarzany wielokrotnie, a każdy kolejny model stara się poprawić błędy poprzedniego.
 Ostateczny wynik to suma wkładów wszystkich modeli.
 
-_Zalety_:
+  _Zalety_:
 
 Bardzo wysoka dokładność, szczególnie dla dużych i złożonych danych.
 
 Radzi sobie z nieliniowymi zależnościami między danymi.
 
-_Wady_:
+  _Wady_:
 
 Wysokie zapotrzebowanie na moc obliczeniową, szczególnie przy dużych danych.
 
@@ -60,7 +60,7 @@ każde drzewo ma ten sam zbiór wejściowych cech, ale ostatecznie wybierany jes
 w pierwszym etapie, a ostateczny wynik (w przypadku klasyfikacji) jest rozpatrywany na podstawie głosowania większościowego. W przypadku regresji możemy wziąć na przykład
 przewidywaną średnią wartość ze wszystkich drzew.
 
-_Zalety RFS_:
+  _Zalety RFS_:
 
 Lasy losowe są bardzo skuteczne w wielu zadaniach, takich jak klasyfikacja i regresja, zwłaszcza gdy dane mają skomplikowane zależności i dużo szumu.
 
@@ -72,7 +72,7 @@ Las losowy automatycznie oblicza, jak ważna jest każda cecha w przewidywaniu w
 
 Random Forests nie zakłada liniowej zależności między cechami a wynikami, co czyni je uniwersalnymi w przypadku danych nieliniowych
 
-_Wady RFS:_
+  _Wady RFS:_
 
 Trudno jest interpretować wyniki lasów losowych, ponieważ są one wynikiem złożonej agregacji wielu drzew decyzyjnych. Nie można wyciągać prostych wniosków, jak w przypadku pojedynczego drzewa decyzyjnego.
 
