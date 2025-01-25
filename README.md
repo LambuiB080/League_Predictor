@@ -13,12 +13,19 @@ Model regresji logistycznej jest uczony na danych historycznych. Proces ten pole
 Przypisywaniu wag: Na początku wagi są losowe, ale podczas uczenia algorytm dostosowuje je, aby minimalizować błąd.
 Funkcji kosztu: Regresja logistyczna korzysta z funkcji entropii krzyżowej, aby ocenić różnicę między przewidywanymi a rzeczywistymi wynikami.
 Optymalizacja: Algorytm iteracyjnie aktualizuje wagi, aby minimalizować funkcję kosztu.
+
 _Zalety:_ 
+
 Prosty do zrozumienia i interpretacji.
+
 Działa dobrze przy ograniczonej liczbie cech.
+
 Szybki w implementacji.
+
 _Wady:_
+
 Zakłada liniową zależność między cechami a logarytmem prawdopodobieństwa, co nie zawsze jest prawdziwe.
+
 Wrażliwy na brakujące dane i silnie skorelowane cechy.
 
 _Gradient Boosting_ - Gradient boosting polega na budowanie kolejnych modeli iteracyjnie, które poprawiją błędy poprzednich modeli.
@@ -28,13 +35,21 @@ Nowe modele uczą się, jak "przesuwać" przewidywania w kierunku rzeczywistych 
 Wyniki nowego modelu są dodawane do poprzedniego modelu, ale z pewnym "współczynnikiem uczenia" (η), który kontroluje, jak duży wpływ mają nowe modele na końcowy wynik.
 Proces ten jest powtarzany wielokrotnie, a każdy kolejny model stara się poprawić błędy poprzedniego.
 Ostateczny wynik to suma wkładów wszystkich modeli.
+
 _Zalety_:
+
 Bardzo wysoka dokładność, szczególnie dla dużych i złożonych danych.
+
 Radzi sobie z nieliniowymi zależnościami między danymi.
+
 _Wady_:
+
 Wysokie zapotrzebowanie na moc obliczeniową, szczególnie przy dużych danych.
+
 Wymaga strojenia wielu hiperparametrów.
+
 Modele są trudne do interpretacji, ponieważ składają się z wielu małych modeli.
+
 
 _Random Tree Forest_ - Został wybrany jako rozwiązanie tego problemu.
 Wybrana koncepcja nosi nazwę Random Forestx (Lasy Losowe). Metoda polega na budowaniu drzew decyzyjnych. Drzewa decyzyjne polegają na schematycznej reprezentacji podejmowania decyzji
@@ -44,14 +59,23 @@ ze zbioru uczącego i Y cech. Dla takiego drzewa tworzone jest niezależne drzew
 każde drzewo ma ten sam zbiór wejściowych cech, ale ostatecznie wybierany jest inny wylosowany podzbiór cech. Na końcu Dokonujmy prognozowania dla każdego drzewa zbudowanego
 w pierwszym etapie, a ostateczny wynik (w przypadku klasyfikacji) jest rozpatrywany na podstawie głosowania większościowego. W przypadku regresji możemy wziąć na przykład
 przewidywaną średnią wartość ze wszystkich drzew.
+
 _Zalety RFS_:
+
 Lasy losowe są bardzo skuteczne w wielu zadaniach, takich jak klasyfikacja i regresja, zwłaszcza gdy dane mają skomplikowane zależności i dużo szumu.
+
 Dzięki losowemu wybieraniu próbek danych i cech, las losowy zapobiega przeuczeniu, które często występuje w pojedynczych drzewach decyzyjnych.
+
 Lasy losowe mogą dobrze działać nawet wtedy, gdy zestaw danych zawiera bardzo dużo zmiennych.
+
 Las losowy automatycznie oblicza, jak ważna jest każda cecha w przewidywaniu wyniku, co pomaga w analizie i interpretacji danych.
+
 Random Forests nie zakłada liniowej zależności między cechami a wynikami, co czyni je uniwersalnymi w przypadku danych nieliniowych
+
 _Wady RFS:_
+
 Trudno jest interpretować wyniki lasów losowych, ponieważ są one wynikiem złożonej agregacji wielu drzew decyzyjnych. Nie można wyciągać prostych wniosków, jak w przypadku pojedynczego drzewa decyzyjnego.
+
 Trening lasów losowych może być czasochłonny i wymaga dużo pamięci, zwłaszcza gdy liczba drzew i cech jest bardzo duża.
 
 
@@ -64,22 +88,37 @@ link do artykułu: https://www.mecs-press.org/ijisa/ijisa-v11-n7/IJISA-V11-N7-3.
 
 
 Do Przeprowadzenia predykcji meczu, potrzebne są dane wejściowe:
+
 'HomeTeam' - Drużyna grająca u siebie
 
 'AwayTeam' - Drużyna grająca na wyjeździe
+
 'PH5H' - Forma drużyny, która gra u siebie z 5 ostatnich meczy u siebie
+
 'PA5A' - Forma drużyny, która gra na wyjeździe z 5 ostatnich meczy na wyjeździe
+
 'AAvgST' - Średnie ilość celnych strzałów drużyny grającej na wyjeździe
+
 'HAvgST' - Średnie ilość celnych strzałów drużyny grającej u siebie
+
 'PA5' - Forma drużyny grającej na wyjeździe z 5 ostatnich meczy
+
 'PH5' - Forma drużyny grającej u siebie z 5 ostatnich meczy
+
 'AvgHTHG' - Średnia liczba goli strzelonych grając u siebie drużyny, która gra u siebie
+
 'AvgATAG' - Średnia liczba goli strzelonych grając na wyjeździe drużyny, która gra na wyjeździe
+
 'Avg5HTG' - Średnia goli z ostatnich 5 meczy drużyny grającej u siebie
+
 'Avg5ATG' - Średnia goli z ostatnich 5 meczy drużyny grającej na wyjeździe
+
 'HAvgY' - Średnia liczba żółtych kartek, drużyny grającej u siebie
+
 'AAvgY' - Średnia liczba żółtych kartek, drużyny grającej na wyjeździe
+
 'HAvgS' - Średnia liczba oddanych strzałów, drużyny grającej u siebie
+
 'AAvgS' - Średnia liczba oddanych strzałów, drużyny grającej na wyjeździe
 
 Cechy zostały dobrane intuicyjnie oraz ze względu na dużą wagę (powinny mieć największy wpływ na rezultat)
