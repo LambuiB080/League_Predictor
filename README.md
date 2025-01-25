@@ -35,7 +35,7 @@ Proces ten jest powtarzany wielokrotnie, a każdy kolejny model stara się popra
 Ostateczny wynik to suma wkładów wszystkich modeli.
 
 
-+ ghrdf
++ g
 
     _Zalety:_ 
     + Prosty do zrozumienia i interpretacji.
