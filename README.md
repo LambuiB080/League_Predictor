@@ -32,12 +32,10 @@ W każdym kroku tworzony jest też nowy model, który próbuje przewidzieć pozo
 Nowe modele uczą się, jak "przesuwać" przewidywania w kierunku rzeczywistych wartości.
 Wyniki nowego modelu są dodawane do poprzedniego modelu, ale z pewnym "współczynnikiem uczenia" (η), który kontroluje, jak duży wpływ mają nowe modele na końcowy wynik.
 Proces ten jest powtarzany wielokrotnie, a każdy kolejny model stara się poprawić błędy poprzedniego.
-Ostateczny wynik to suma wkładów wszystkich modeli.:
-
-+ cfac
+Ostateczny wynik to suma wkładów wszystkich modeli.
 
 
-
++ 
 
     _Zalety:_ 
     + Prosty do zrozumienia i interpretacji.
