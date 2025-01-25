@@ -11,11 +11,11 @@ W koncepcji przewidywania meczy należy rozważyć 3 koncepcje:
 _Regresja logistyczna_ - Regresja logistyczna przekształca problem przewidywania wyniku w prawdopodobieństwo, wykorzystując funkcję logistyczną (sigmoidę).
 Model regresji logistycznej jest uczony na danych historycznych. Proces ten polega na:
 
-Przypisywaniu wag: Na początku wagi są losowe, ale podczas uczenia algorytm dostosowuje je, aby minimalizować błąd.
++ przypisywaniu wag: Na początku wagi są losowe, ale podczas uczenia algorytm dostosowuje je, aby minimalizować błąd.
 
-Funkcji kosztu: Regresja logistyczna korzysta z funkcji entropii krzyżowej, aby ocenić różnicę między przewidywanymi a rzeczywistymi wynikami.
++ określeniu funkcji kosztu: Regresja logistyczna korzysta z funkcji entropii krzyżowej, aby ocenić różnicę między przewidywanymi a rzeczywistymi wynikami.
 
-Optymalizacja: Algorytm iteracyjnie aktualizuje wagi, aby minimalizować funkcję kosztu.
++ optymalizacji: Algorytm iteracyjnie aktualizuje wagi, aby minimalizować funkcję kosztu.
 
     _Zalety:_ 
 
@@ -31,7 +31,7 @@ Optymalizacja: Algorytm iteracyjnie aktualizuje wagi, aby minimalizować funkcj�
 
     Wrażliwy na brakujące dane i silnie skorelowane cechy.
 
-_Gradient Boosting_ - Gradient boosting polega na budowanie kolejnych modeli iteracyjnie, które poprawiją błędy poprzednich modeli.
+_Gradient Boosting_ - Gradient boosting polega na budowaniu kolejnych modeli iteracyjnie, które poprawiają błędy poprzednich modeli.
 W każdym kroku obliczany jest błąd aktualnego modelu (czyli różnica między prawdziwą wartością a wartością przewidywaną).
 W każdym kroku tworzony jest nowy model, który próbuje przewidzieć pozostały błąd poprzedniego modelu.
 Nowe modele uczą się, jak "przesuwać" przewidywania w kierunku rzeczywistych wartości.
