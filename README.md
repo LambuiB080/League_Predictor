@@ -52,34 +52,27 @@ Każde ma także ten sam zbiór wejściowych cech, ale ostatecznie wybierany jes
 w pierwszym etapie, a ostateczny wynik (w przypadku klasyfikacji) jest rozpatrywany na podstawie głosowania większościowego. W przypadku regresji możemy wziąć na przykład
 przewidywaną średnią wartość ze wszystkich drzew.
 
-      _Zalety RFS_:
+#### Zalety RFS:
+- Lasy losowe są bardzo skuteczne w wielu zadaniach, takich jak klasyfikacja i regresja, zwłaszcza gdy dane mają skomplikowane zależności i dużo szumu.
+- Dzięki losowemu wybieraniu próbek danych i cech, las losowy zapobiega przeuczeniu, które często występuje w pojedynczych drzewach decyzyjnych.
+- Lasy losowe mogą dobrze działać nawet wtedy, gdy zestaw danych zawiera bardzo dużo zmiennych.
+- Las losowy automatycznie oblicza, jak ważna jest każda cecha w przewidywaniu wyniku, co pomaga w analizie i interpretacji danych.
+- Koncepcja nie zakłada liniowej zależności między cechami a wynikami, co czyni ją uniwersalną w przypadku danych nieliniowych.
 
-    + Lasy losowe są bardzo skuteczne w wielu zadaniach, takich jak klasyfikacja i regresja, zwłaszcza gdy dane mają skomplikowane zależności i dużo szumu.
-
-    + Dzięki losowemu wybieraniu próbek danych i cech, las losowy zapobiega przeuczeniu, które często występuje w pojedynczych drzewach decyzyjnych.
-
-    + Lasy losowe mogą dobrze działać nawet wtedy, gdy zestaw danych zawiera bardzo dużo zmiennych.
-
-    + Las losowy automatycznie oblicza, jak ważna jest każda cecha w przewidywaniu wyniku, co pomaga w analizie i interpretacji danych.
-
-    + Koncepcja nie zakłada liniowej zależności między cechami a wynikami, co czyni ją uniwersalną w przypadku danych nieliniowych.
-
-      _Wady RFS:_
-
-    + Trudno jest interpretować wyniki lasów losowych, ponieważ są one wynikiem złożonej agregacji wielu drzew decyzyjnych. Nie można wyciągać prostych wniosków, jak w przypadku pojedynczego drzewa decyzyjnego.
-
-    + Trening lasów losowych może być czasochłonny i wymaga dużo pamięci, zwłaszcza gdy liczba drzew i cech jest bardzo duża.
+#### Wady RFS:
+- Trudno jest interpretować wyniki lasów losowych, ponieważ są one wynikiem złożonej agregacji wielu drzew decyzyjnych. Nie można wyciągać prostych wniosków, jak w przypadku pojedynczego drzewa decyzyjnego.
+- Trening lasów losowych może być czasochłonny i wymaga dużo pamięci, zwłaszcza gdy liczba drzew i cech jest bardzo duża.
 
 
 **3.Opis wybranej koncepcji**
 
 Wybrany został algorytm RFS ponieważ wady i zalety zestawionych metod przedstawiały RFS w najlepszym świetle,
 biorąc pod uwagę nieliniowość, ryzyko przeuczenia, oraz duży zbiór cech połączony z ograniczoną liczbą danych do nauki modelu.
-Wpływ miało również przeprowadzone badanie, z którego wynikła wyższość modelu RFS nad Gradient Boostingiem i C5.0. 
-link do artykułu: https://www.mecs-press.org/ijisa/ijisa-v11-n7/IJISA-V11-N7-3.pdf
+Wpływ miało również przeprowadzone badanie, z którego wynika wyższość modelu RFS nad Gradient Boostingiem i C5.0. 
+Link do artykułu: https://www.mecs-press.org/ijisa/ijisa-v11-n7/IJISA-V11-N7-3.pdf
 
 
-Do Przeprowadzenia predykcji meczu, potrzebne są dane wejściowe:
+Do przeprowadzenia predykcji meczu, potrzebne są dane wejściowe:
 
 'HomeTeam' - Drużyna grająca u siebie
 
