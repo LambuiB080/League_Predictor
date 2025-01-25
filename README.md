@@ -35,14 +35,19 @@ Proces ten jest powtarzany wielokrotnie, a każdy kolejny model stara się popra
 Ostateczny wynik to suma wkładów wszystkich modeli.
 
 
-#### Zalety:
-- Prosty do zrozumienia i interpretacji.
-- Działa dobrze przy ograniczonej liczbie cech.
-- Szybki w implementacji.
+###  Zalety:
+
+    + Bardzo wysoka dokładność, szczególnie dla dużych i złożonych danych.
+
+    + Radzi sobie z nieliniowymi zależnościami między danymi.
 
 #### Wady:
-- Zakłada liniową zależność między cechami a logarytmem prawdopodobieństwa, co nie zawsze jest prawdziwe.
-- Wrażliwy na brakujące dane i silnie skorelowane cechy.
+
+    + Wysokie zapotrzebowanie na moc obliczeniową, szczególnie przy dużych danych.
+
+    + Wymaga strojenia wielu hiperparametrów.
+
+    + Modele są trudne do interpretacji, ponieważ składają się z wielu małych modeli.
 
 
 
