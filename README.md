@@ -10,8 +10,11 @@ W koncepcji przewidywania meczy należy rozważyć 3 koncepcje:
 
 _Regresja logistyczna_ - Regresja logistyczna przekształca problem przewidywania wyniku w prawdopodobieństwo, wykorzystując funkcję logistyczną (sigmoidę).
 Model regresji logistycznej jest uczony na danych historycznych. Proces ten polega na:
+
 Przypisywaniu wag: Na początku wagi są losowe, ale podczas uczenia algorytm dostosowuje je, aby minimalizować błąd.
+
 Funkcji kosztu: Regresja logistyczna korzysta z funkcji entropii krzyżowej, aby ocenić różnicę między przewidywanymi a rzeczywistymi wynikami.
+
 Optymalizacja: Algorytm iteracyjnie aktualizuje wagi, aby minimalizować funkcję kosztu.
 
     _Zalety:_ 
