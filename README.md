@@ -74,48 +74,47 @@ Link do artykułu: https://www.mecs-press.org/ijisa/ijisa-v11-n7/IJISA-V11-N7-3.
 
 Do przeprowadzenia predykcji meczu, potrzebne są dane wejściowe:
 
-+ 'HomeTeam' - Drużyna grająca u siebie
++ 'HomeTeam' - drużyna grająca u siebie
 
-+ 'AwayTeam' - Drużyna grająca na wyjeździe
++ 'AwayTeam' - drużyna grająca na wyjeździe
 
-+ 'PH5H' - Forma drużyny, która gra u siebie z 5 ostatnich meczy u siebie
++ 'PH5H' - forma drużyny, która gra u siebie z 5 ostatnich meczy u siebie
 
-+ 'PA5A' - Forma drużyny, która gra na wyjeździe z 5 ostatnich meczy na wyjeździe
++ 'PA5A' - forma drużyny, która gra na wyjeździe z 5 ostatnich meczy na wyjeździe
 
-'AAvgST' - Średnie ilość celnych strzałów drużyny grającej na wyjeździe
++ 'AAvgST' - średnia ilość celnych strzałów drużyny grającej na wyjeździe
 
-'HAvgST' - Średnie ilość celnych strzałów drużyny grającej u siebie
++ 'HAvgST' - średnia ilość celnych strzałów drużyny grającej u siebie
 
-'PA5' - Forma drużyny grającej na wyjeździe z 5 ostatnich meczy
++ 'PA5' - forma drużyny grającej na wyjeździe z 5 ostatnich meczy
 
-'PH5' - Forma drużyny grającej u siebie z 5 ostatnich meczy
++ 'PH5' - forma drużyny grającej u siebie z 5 ostatnich meczy
 
-'AvgHTHG' - Średnia liczba goli strzelonych grając u siebie drużyny, która gra u siebie
++ 'AvgHTHG' - średnia liczba goli strzelonych drużyny, która gra u siebie
 
-'AvgATAG' - Średnia liczba goli strzelonych grając na wyjeździe drużyny, która gra na wyjeździe
++ 'AvgATAG' - śąrednia liczba goli strzelonych drużyny, która gra na wyjeździe
 
-'Avg5HTG' - Średnia goli z ostatnich 5 meczy drużyny grającej u siebie
++ 'Avg5HTG' - średnia goli z ostatnich 5 meczy drużyny grającej u siebie
 
-'Avg5ATG' - Średnia goli z ostatnich 5 meczy drużyny grającej na wyjeździe
++ 'Avg5ATG' - średnia goli z ostatnich 5 meczy drużyny grającej na wyjeździe
 
-'HAvgY' - Średnia liczba żółtych kartek, drużyny grającej u siebie
++ 'HAvgY' - średnia liczba żółtych kartek drużyny grającej u siebie
 
-'AAvgY' - Średnia liczba żółtych kartek, drużyny grającej na wyjeździe
++ 'AAvgY' - średnia liczba żółtych kartek drużyny grającej na wyjeździe
 
-'HAvgS' - Średnia liczba oddanych strzałów, drużyny grającej u siebie
++ 'HAvgS' - średnia liczba oddanych strzałów drużyny grającej u siebie
 
-'AAvgS' - Średnia liczba oddanych strzałów, drużyny grającej na wyjeździe
++ 'AAvgS' - średnia liczba oddanych strzałów drużyny grającej na wyjeździe
 
-Cechy zostały dobrane intuicyjnie oraz ze względu na dużą wagę (powinny mieć największy wpływ na rezultat)
-Napisany program samodzielnie pobiera bazę danych oblicza wartości cech dla danych drużyn, tworzy model i na jego podstawie przewiduje
+Cechy zostały dobrane intuicyjnie oraz ze względu na dużą wagę (duża waga powinna mieć największy wpływ na rezultat).
+Napisany program samodzielnie pobiera bazę danych, oblicza wartości cech dla danych drużyn, tworzy model i na jego podstawie przewiduje
 prawdopodobieństwo wygranej drużyny grającej u siebie, drużyny grającej na wyjeździe lub remisu.
 
 Program zawiera:
-model o skuteczności 60%, którego można użyć do predykcji
-możliwość wytrenowania modelu na podstawie wszystkich meczy dotychczas
-możliwość predykcji rezultatu meczu za pomocą wytrenowanego wcześniej modelu
-możliwość sprawdzenia parametrów modelu (accuracy, confusion matrix)
-intuicyjne menu które wyraźnie wskazuję co się dzieje w programie
++ model o skuteczności 60%, którego można użyć do predykcji
++ możliwość wytrenowania modelu na podstawie wszystkich meczy dotychczas rozegranych
++ możliwość predykcji rezultatu meczu za pomocą wytrenowanego wcześniej modelu
++ możliwość sprawdzenia parametrów modelu (accuracy, confusion matrix)
++ intuicyjne menu które wyraźnie wskazuje, co się dzieje w programie.
 
-Program zapobiega błędom, jednak aby działał poprawnie potrzebne jest połączenie internetowe (do pobrania bazy danych)
-
+Program zapobiega błędom, jednak aby działał poprawnie potrzebne jest połączenie internetowe (do pobrania bazy danych).
