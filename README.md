@@ -17,19 +17,10 @@ Model regresji logistycznej jest uczony na danych historycznych. Proces ten pole
 
 + optymalizacji: Algorytm iteracyjnie aktualizuje wagi, aby minimalizować funkcję kosztu.
 
-    _Zalety:_ 
-
-    + Prosty do zrozumienia i interpretacji.
-
-    + Działa dobrze przy ograniczonej liczbie cech.
-
-    + Szybki w implementacji.
-
-    _Wady:_
-
-    + Zakłada liniową zależność między cechami a logarytmem prawdopodobieństwa, co nie zawsze jest prawdziwe.
-
-    + Wrażliwy na brakujące dane i silnie skorelowane cechy.
+_Zalety:_ 
++ Prosty do zrozumienia i interpretacji.
++ Działa dobrze przy ograniczonej liczbie cech.
++ Szybki w implementacji.
 
 _Gradient Boosting_ - Gradient boosting polega na budowaniu kolejnych modeli iteracyjnie, które poprawiają błędy poprzednich modeli.
 W każdym kroku obliczany jest błąd aktualnego modelu (czyli różnica między prawdziwą wartością a wartością przewidywaną).
