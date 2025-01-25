@@ -56,6 +56,7 @@ Trening lasów losowych może być czasochłonny i wymaga dużo pamięci, zwłas
 
 
 **3.Opis wybranej koncepcji**
+
 Wybrany został algorytm RFS ponieważ wady i zalety zestawionych metod przedstawiały RFS w najlepszym świetle,
 biorąc pod uwagę nieliniowość, ryzyko przeuczenia, oraz duży zbiór cech połączony z ograniczoną liczbą danych do nauki modelu.
 Wpływ miało również przeprowadzone badanie, z którego wynikła wyższość modelu RFS nad Gradient Boostingiem i C5.0. 
