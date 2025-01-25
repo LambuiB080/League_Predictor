@@ -65,6 +65,7 @@ link do artykułu: https://www.mecs-press.org/ijisa/ijisa-v11-n7/IJISA-V11-N7-3.
 
 Do Przeprowadzenia predykcji meczu, potrzebne są dane wejściowe:
 'HomeTeam' - Drużyna grająca u siebie
+
 'AwayTeam' - Drużyna grająca na wyjeździe
 'PH5H' - Forma drużyny, która gra u siebie z 5 ostatnich meczy u siebie
 'PA5A' - Forma drużyny, która gra na wyjeździe z 5 ostatnich meczy na wyjeździe
