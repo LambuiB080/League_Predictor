@@ -35,12 +35,12 @@ Proces ten jest powtarzany wielokrotnie, a każdy kolejny model stara się popra
 Ostateczny wynik to suma wkładów wszystkich modeli.
 
 
-# Zalety:
+#### Zalety:
 - Prosty do zrozumienia i interpretacji.
 - Działa dobrze przy ograniczonej liczbie cech.
 - Szybki w implementacji.
 
-# Wady:
+#### Wady:
 - Zakłada liniową zależność między cechami a logarytmem prawdopodobieństwa, co nie zawsze jest prawdziwe.
 - Wrażliwy na brakujące dane i silnie skorelowane cechy.
 
