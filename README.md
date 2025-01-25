@@ -19,21 +19,21 @@ Model regresji logistycznej jest uczony na danych historycznych. Proces ten pole
 
     _Zalety:_ 
 
-    Prosty do zrozumienia i interpretacji.
+    + Prosty do zrozumienia i interpretacji.
 
-    Działa dobrze przy ograniczonej liczbie cech.
+    + Działa dobrze przy ograniczonej liczbie cech.
 
-    Szybki w implementacji.
+    + Szybki w implementacji.
 
     _Wady:_
 
-    Zakłada liniową zależność między cechami a logarytmem prawdopodobieństwa, co nie zawsze jest prawdziwe.
+    + Zakłada liniową zależność między cechami a logarytmem prawdopodobieństwa, co nie zawsze jest prawdziwe.
 
-    Wrażliwy na brakujące dane i silnie skorelowane cechy.
+    + Wrażliwy na brakujące dane i silnie skorelowane cechy.
 
 _Gradient Boosting_ - Gradient boosting polega na budowaniu kolejnych modeli iteracyjnie, które poprawiają błędy poprzednich modeli.
 W każdym kroku obliczany jest błąd aktualnego modelu (czyli różnica między prawdziwą wartością a wartością przewidywaną).
-W każdym kroku tworzony jest nowy model, który próbuje przewidzieć pozostały błąd poprzedniego modelu.
+W każdym kroku tworzony jest też nowy model, który próbuje przewidzieć pozostały błąd poprzedniego modelu.
 Nowe modele uczą się, jak "przesuwać" przewidywania w kierunku rzeczywistych wartości.
 Wyniki nowego modelu są dodawane do poprzedniego modelu, ale z pewnym "współczynnikiem uczenia" (η), który kontroluje, jak duży wpływ mają nowe modele na końcowy wynik.
 Proces ten jest powtarzany wielokrotnie, a każdy kolejny model stara się poprawić błędy poprzedniego.
@@ -41,45 +41,45 @@ Ostateczny wynik to suma wkładów wszystkich modeli.
 
       _Zalety_:
 
-    Bardzo wysoka dokładność, szczególnie dla dużych i złożonych danych.
+    + Bardzo wysoka dokładność, szczególnie dla dużych i złożonych danych.
 
-    Radzi sobie z nieliniowymi zależnościami między danymi.
+    + Radzi sobie z nieliniowymi zależnościami między danymi.
 
       _Wady_:
 
-    Wysokie zapotrzebowanie na moc obliczeniową, szczególnie przy dużych danych.
+    + Wysokie zapotrzebowanie na moc obliczeniową, szczególnie przy dużych danych.
 
-    Wymaga strojenia wielu hiperparametrów.
+    + Wymaga strojenia wielu hiperparametrów.
 
-    Modele są trudne do interpretacji, ponieważ składają się z wielu małych modeli.
+    + Modele są trudne do interpretacji, ponieważ składają się z wielu małych modeli.
 
 
 _Random Tree Forest_ - Został wybrany jako rozwiązanie tego problemu.
-Wybrana koncepcja nosi nazwę Random Forestx (Lasy Losowe). Metoda polega na budowaniu drzew decyzyjnych. Drzewa decyzyjne polegają na schematycznej reprezentacji podejmowania decyzji
+Wybrana koncepcja nosi nazwę Random Forestx (Lasy Losowe). Metoda polega na budowaniu drzew decyzyjnych. Drzewa decyzyjne reprezentują schematycznie proces podejmowania decyzji
 pod pewnymi warunkami. Algorytm dąży do tego aby wyodrębnić poszczególne poprzez przechodzenie przez konkretne warunki. Idealne drzewo decyzyjne po danej sekwencji warunków
-zawiera tylko jedną klase wyboru w "liściu". Algorytm Random Forests (RFS) polega na stowrzeniu n drzew decyzyjnych. Dla każdego drzewa wybieramy losowo X punktów damych
-ze zbioru uczącego i Y cech. Dla takiego drzewa tworzone jest niezależne drzewo decyzyjne. Następnie każde drzewo dostaje losową liczbę obserwacji ze zwracaniem, 
-każde drzewo ma ten sam zbiór wejściowych cech, ale ostatecznie wybierany jest inny wylosowany podzbiór cech. Na końcu Dokonujmy prognozowania dla każdego drzewa zbudowanego
+zawiera tylko jedną klase wyboru w "liściu". Algorytm Random Forests (RFS) polega na stworzeniu n drzew decyzyjnych. Dla każdego drzewa wybieramy losowo X punktów danych
+ze zbioru uczącego i Y cech. Dla takiego drzewa tworzone jest niezależne drzewo decyzyjne. Następnie każde drzewo dostaje losową liczbę obserwacji ze zwracaniem. 
+Każde ma także ten sam zbiór wejściowych cech, ale ostatecznie wybierany jest inny wylosowany podzbiór cech. Na końcu dokonujmy prognozowania dla każdego drzewa zbudowanego
 w pierwszym etapie, a ostateczny wynik (w przypadku klasyfikacji) jest rozpatrywany na podstawie głosowania większościowego. W przypadku regresji możemy wziąć na przykład
 przewidywaną średnią wartość ze wszystkich drzew.
 
       _Zalety RFS_:
 
-    Lasy losowe są bardzo skuteczne w wielu zadaniach, takich jak klasyfikacja i regresja, zwłaszcza gdy dane mają skomplikowane zależności i dużo szumu.
+    + Lasy losowe są bardzo skuteczne w wielu zadaniach, takich jak klasyfikacja i regresja, zwłaszcza gdy dane mają skomplikowane zależności i dużo szumu.
 
-    Dzięki losowemu wybieraniu próbek danych i cech, las losowy zapobiega przeuczeniu, które często występuje w pojedynczych drzewach decyzyjnych.
+    + Dzięki losowemu wybieraniu próbek danych i cech, las losowy zapobiega przeuczeniu, które często występuje w pojedynczych drzewach decyzyjnych.
 
-    Lasy losowe mogą dobrze działać nawet wtedy, gdy zestaw danych zawiera bardzo dużo zmiennych.
+    + Lasy losowe mogą dobrze działać nawet wtedy, gdy zestaw danych zawiera bardzo dużo zmiennych.
 
-    Las losowy automatycznie oblicza, jak ważna jest każda cecha w przewidywaniu wyniku, co pomaga w analizie i interpretacji danych.
+    + Las losowy automatycznie oblicza, jak ważna jest każda cecha w przewidywaniu wyniku, co pomaga w analizie i interpretacji danych.
 
-    Random Forests nie zakłada liniowej zależności między cechami a wynikami, co czyni je uniwersalnymi w przypadku danych nieliniowych
+    + Koncepcja nie zakłada liniowej zależności między cechami a wynikami, co czyni ją uniwersalną w przypadku danych nieliniowych.
 
       _Wady RFS:_
 
-    Trudno jest interpretować wyniki lasów losowych, ponieważ są one wynikiem złożonej agregacji wielu drzew decyzyjnych. Nie można wyciągać prostych wniosków, jak w przypadku pojedynczego drzewa decyzyjnego.
+    + Trudno jest interpretować wyniki lasów losowych, ponieważ są one wynikiem złożonej agregacji wielu drzew decyzyjnych. Nie można wyciągać prostych wniosków, jak w przypadku pojedynczego drzewa decyzyjnego.
 
-    Trening lasów losowych może być czasochłonny i wymaga dużo pamięci, zwłaszcza gdy liczba drzew i cech jest bardzo duża.
+    + Trening lasów losowych może być czasochłonny i wymaga dużo pamięci, zwłaszcza gdy liczba drzew i cech jest bardzo duża.
 
 
 **3.Opis wybranej koncepcji**
