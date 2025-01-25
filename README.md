@@ -24,9 +24,9 @@ Optymalizacja: Algorytm iteracyjnie aktualizuje wagi, aby minimalizować funkcj�
 
     _Wady:_
 
-Zakłada liniową zależność między cechami a logarytmem prawdopodobieństwa, co nie zawsze jest prawdziwe.
+    Zakłada liniową zależność między cechami a logarytmem prawdopodobieństwa, co nie zawsze jest prawdziwe.
 
-Wrażliwy na brakujące dane i silnie skorelowane cechy.
+    Wrażliwy na brakujące dane i silnie skorelowane cechy.
 
 _Gradient Boosting_ - Gradient boosting polega na budowanie kolejnych modeli iteracyjnie, które poprawiją błędy poprzednich modeli.
 W każdym kroku obliczany jest błąd aktualnego modelu (czyli różnica między prawdziwą wartością a wartością przewidywaną).
@@ -36,19 +36,19 @@ Wyniki nowego modelu są dodawane do poprzedniego modelu, ale z pewnym "współc
 Proces ten jest powtarzany wielokrotnie, a każdy kolejny model stara się poprawić błędy poprzedniego.
 Ostateczny wynik to suma wkładów wszystkich modeli.
 
-  _Zalety_:
+      _Zalety_:
 
-Bardzo wysoka dokładność, szczególnie dla dużych i złożonych danych.
+    Bardzo wysoka dokładność, szczególnie dla dużych i złożonych danych.
 
-Radzi sobie z nieliniowymi zależnościami między danymi.
+    Radzi sobie z nieliniowymi zależnościami między danymi.
 
-  _Wady_:
+      _Wady_:
 
-Wysokie zapotrzebowanie na moc obliczeniową, szczególnie przy dużych danych.
+    Wysokie zapotrzebowanie na moc obliczeniową, szczególnie przy dużych danych.
 
-Wymaga strojenia wielu hiperparametrów.
+    Wymaga strojenia wielu hiperparametrów.
 
-Modele są trudne do interpretacji, ponieważ składają się z wielu małych modeli.
+    Modele są trudne do interpretacji, ponieważ składają się z wielu małych modeli.
 
 
 _Random Tree Forest_ - Został wybrany jako rozwiązanie tego problemu.
@@ -60,23 +60,23 @@ każde drzewo ma ten sam zbiór wejściowych cech, ale ostatecznie wybierany jes
 w pierwszym etapie, a ostateczny wynik (w przypadku klasyfikacji) jest rozpatrywany na podstawie głosowania większościowego. W przypadku regresji możemy wziąć na przykład
 przewidywaną średnią wartość ze wszystkich drzew.
 
-  _Zalety RFS_:
+      _Zalety RFS_:
 
-Lasy losowe są bardzo skuteczne w wielu zadaniach, takich jak klasyfikacja i regresja, zwłaszcza gdy dane mają skomplikowane zależności i dużo szumu.
+    Lasy losowe są bardzo skuteczne w wielu zadaniach, takich jak klasyfikacja i regresja, zwłaszcza gdy dane mają skomplikowane zależności i dużo szumu.
 
-Dzięki losowemu wybieraniu próbek danych i cech, las losowy zapobiega przeuczeniu, które często występuje w pojedynczych drzewach decyzyjnych.
+    Dzięki losowemu wybieraniu próbek danych i cech, las losowy zapobiega przeuczeniu, które często występuje w pojedynczych drzewach decyzyjnych.
 
-Lasy losowe mogą dobrze działać nawet wtedy, gdy zestaw danych zawiera bardzo dużo zmiennych.
+    Lasy losowe mogą dobrze działać nawet wtedy, gdy zestaw danych zawiera bardzo dużo zmiennych.
 
-Las losowy automatycznie oblicza, jak ważna jest każda cecha w przewidywaniu wyniku, co pomaga w analizie i interpretacji danych.
+    Las losowy automatycznie oblicza, jak ważna jest każda cecha w przewidywaniu wyniku, co pomaga w analizie i interpretacji danych.
 
-Random Forests nie zakłada liniowej zależności między cechami a wynikami, co czyni je uniwersalnymi w przypadku danych nieliniowych
+    Random Forests nie zakłada liniowej zależności między cechami a wynikami, co czyni je uniwersalnymi w przypadku danych nieliniowych
 
-  _Wady RFS:_
+      _Wady RFS:_
 
-Trudno jest interpretować wyniki lasów losowych, ponieważ są one wynikiem złożonej agregacji wielu drzew decyzyjnych. Nie można wyciągać prostych wniosków, jak w przypadku pojedynczego drzewa decyzyjnego.
+    Trudno jest interpretować wyniki lasów losowych, ponieważ są one wynikiem złożonej agregacji wielu drzew decyzyjnych. Nie można wyciągać prostych wniosków, jak w przypadku pojedynczego drzewa decyzyjnego.
 
-Trening lasów losowych może być czasochłonny i wymaga dużo pamięci, zwłaszcza gdy liczba drzew i cech jest bardzo duża.
+    Trening lasów losowych może być czasochłonny i wymaga dużo pamięci, zwłaszcza gdy liczba drzew i cech jest bardzo duża.
 
 
 **3.Opis wybranej koncepcji**
