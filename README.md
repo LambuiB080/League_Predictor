@@ -39,19 +39,19 @@ Wyniki nowego modelu są dodawane do poprzedniego modelu, ale z pewnym "współc
 Proces ten jest powtarzany wielokrotnie, a każdy kolejny model stara się poprawić błędy poprzedniego.
 Ostateczny wynik to suma wkładów wszystkich modeli.
 
-    _Zalety_:
+    _Zalety:_ 
 
-    + Bardzo wysoka dokładność, szczególnie dla dużych i złożonych danych.
+    + Prosty do zrozumienia i interpretacji.
 
-    + Radzi sobie z nieliniowymi zależnościami między danymi.
+    + Działa dobrze przy ograniczonej liczbie cech.
 
-    _Wady_:
+    + Szybki w implementacji.
 
-    + Wysokie zapotrzebowanie na moc obliczeniową, szczególnie przy dużych danych.
+    _Wady:_
 
-    + Wymaga strojenia wielu hiperparametrów.
+    + Zakłada liniową zależność między cechami a logarytmem prawdopodobieństwa, co nie zawsze jest prawdziwe.
 
-    + Modele są trudne do interpretacji, ponieważ składają się z wielu małych modeli.
+    + Wrażliwy na brakujące dane i silnie skorelowane cechy.
 
 
 _Random Tree Forest_ - Został wybrany jako rozwiązanie tego problemu.
