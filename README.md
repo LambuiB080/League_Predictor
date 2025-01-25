@@ -45,7 +45,7 @@ Ostateczny wynik to suma wkładów wszystkich modeli.
 
 _Random Tree Forest_ - Został wybrany jako rozwiązanie tego problemu.
 Wybrana koncepcja nosi nazwę Random Forestx (Lasy Losowe). Metoda polega na budowaniu drzew decyzyjnych. Drzewa decyzyjne reprezentują schematycznie proces podejmowania decyzji
-pod pewnymi warunkami. Algorytm dąży do tego aby wyodrębnić poszczególne poprzez przechodzenie przez konkretne warunki. Idealne drzewo decyzyjne po danej sekwencji warunków
+pod pewnymi warunkami. Algorytm dąży do tego, aby wyodrębnić poszczególne klasy poprzez przechodzenie przez konkretne warunki. Idealne drzewo decyzyjne po danej sekwencji warunków
 zawiera tylko jedną klase wyboru w "liściu". Algorytm Random Forests (RFS) polega na stworzeniu n drzew decyzyjnych. Dla każdego drzewa wybieramy losowo X punktów danych
 ze zbioru uczącego i Y cech. Dla takiego drzewa tworzone jest niezależne drzewo decyzyjne. Następnie każde drzewo dostaje losową liczbę obserwacji ze zwracaniem. 
 Każde ma także ten sam zbiór wejściowych cech, ale ostatecznie wybierany jest inny wylosowany podzbiór cech. Na końcu dokonujmy prognozowania dla każdego drzewa zbudowanego
