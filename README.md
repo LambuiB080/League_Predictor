@@ -8,23 +8,21 @@ Projekt może posłużyć do pomocy w obstawianiu zakładów bukmacherskich.
 
 W koncepcji przewidywania meczy należy rozważyć 3 koncepcje:
 
-_Regresja logistyczna_ - Regresja logistyczna przekształca problem przewidywania wyniku w prawdopodobieństwo, wykorzystując funkcję logistyczną (sigmoidę).
-Model regresji logistycznej jest uczony na danych historycznych. Proces ten polega na:
+_Regresja logistyczna_ - algorytm uczenia maszynowego używany do zadań klasyfikacyjnych. Celem jest określenie prawdopodobieństwa, że dane zdarzenie (u nas - wynik meczu) należy do danej klasy (zwycięstwo, remis, porażka). W tym celu wykorzystywana jest tzw. funkcja sigmoidalna - przyjmuje ona dane wejściowe jako zmienne niezależne a wynikiem jej działania jest wartość prawdopodobieństwa (zmienna zależna) między 0 a 1. Stosując ten algorytm, konieczne jest spełnienie kilku założeń takich jak: niezależne obserwacje, duża próbka danych, brak wartości "odstających" od reszty i liniowa zależność między zmiennymi niezależnymi i funkcją logitową. Algorytm realizuje się w trzech krokach:
+1. Wyznaczenie funkcji liniowej z zależnej od zbioru cech wejściowych X za pomocą regresji liniowej. Kluczowe są tu wagi przypisywane do każdej cechy.
+2. Przekształcenie funkcji z z użyciem funkcji sigmoidalnej, która przekształca funkcję ciągłą na wartość prawdopodobieństwa.
+3. Obliczenie funkcji kosztu.
+4. Optymalizacja wag poprzez minimalizację funkcji kosztu.
+5. Przewidywanie wyniku.
 
-+ przypisywaniu wag: Na początku wagi są losowe, ale podczas uczenia algorytm dostosowuje je, aby minimalizować błąd.
-
-+ określeniu funkcji kosztu: Regresja logistyczna korzysta z funkcji entropii krzyżowej, aby ocenić różnicę między przewidywanymi a rzeczywistymi wynikami.
-
-+ optymalizacji: Algorytm iteracyjnie aktualizuje wagi, aby minimalizować funkcję kosztu.
-
-#### Zalety:
-- Prosty do zrozumienia i interpretacji.
-- Działa dobrze przy ograniczonej liczbie cech.
-- Szybki w implementacji.
-
-#### Wady:
-- Zakłada liniową zależność między cechami a logarytmem prawdopodobieństwa, co nie zawsze jest prawdziwe.
-- Wrażliwy na brakujące dane i silnie skorelowane cechy.
+Zalety:
+- Prostowa i łatwa interpretacja
+- Dobrze działa na małych i średnich zbiorach danych
+- Możliwość skalowania do większych problemów (np. Softmax regression)
+Wady: 
+- Wrażliwość na wartości odstające
+- Gorsze działanie dla silnie skorelowanych cech
+- Gorsze radzenie sobie z dużą liczbą cech.
 
 _Gradient Boosting_ - Gradient boosting polega na budowaniu kolejnych modeli iteracyjnie, które poprawiają błędy poprzednich modeli.
 W każdym kroku obliczany jest błąd aktualnego modelu (czyli różnica między prawdziwą wartością a wartością przewidywaną).
