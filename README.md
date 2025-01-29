@@ -15,37 +15,37 @@ _Regresja logistyczna_ - algorytm uczenia maszynowego używany do zadań klasyfi
 4. Optymalizacja wag poprzez minimalizację funkcji kosztu.
 5. Przewidywanie wyniku.
 
-Zalety:
+### Zalety:
 - Prostowa i łatwa interpretacja
 - Dobrze działa na małych i średnich zbiorach danych
 - Możliwość skalowania do większych problemów (np. Softmax regression)
 
-Wady: 
+### Wady: 
 - Wrażliwość na wartości odstające
 - Gorsze działanie dla silnie skorelowanych cech
 - Gorsze radzenie sobie z dużą liczbą cech.
 
 _Gradient Boosting_ - algorytm trenuje model sekwencyjnie (nazywamy to boostingiem) - każdy nowy model próbuje poprawić poprzedni m.in. zminimalizować funkcję strat. W pierwszym kroku obliczany jest błąd, czyli różnica między wartościami rzeczywistymi a przewidywaniami modelu. Następnie nowy model jest trenowany - przewiduje przy tym przyszły błąd i tym samym uczy się poprawiać błędy poprzedniego modelu. Prognozy z każdej iteracji są dodawane do dotychczasowego modelu. Proces ten trwa do momentu, gdy błąd przestanie się zmniejszać lub zostanie osiągnięta zadana liczba iteracji.
 
-ZALETY:
+### ZALETY:
 - wysoka dokładność - wyniki są lepsze niż dla regresji logistycznej,
 - obsługa różnych typów danych,
 - dobra odporność na przeuczenie.
 
-WADY:
+### WADY:
 - wysoka złożoność obliczeniowa,
 - Wrażliwość na wartości odstające
 - Wymaga dobrego dostrojenia parametrów.
 
 _Random Forest_ - algorytm wykorzystujący zbiór drzew decyzyjnych, które współpracują ze sobą, aby tworzyć przewidywania. To właśnie on został wybrany w realizowanym projekcie.  W pierwszym jego kroku, na podstawie losowych próbek danych, budowane są drzewa decyzyjne. Ponieważ trenowane są one na różnych podzbiorach danych, każde z nich jest unikalne. Następnie każde z nich dokonuje prognozy wyniku na podstawie otrzymanych danych. Przy dokonywaniu ostatecznej prognozy łączone są wyniki ze wszystkich drzew. W przypadku zadań klasyfikacyjnych ostateczna prognoza to ta, którą przewiduje większość drzew. Z kolei dla zadania regresji jest nią średnia prognoz ze wszystkich drzew. Losowość próbek danych i doboru funkcji powoduje, że wyniki działania algorytmu są dokładniejsze i bardziej wiarygodne.
 
-ZALETY:
+### ZALETY:
 - Dokładne prognozy nawet dla dużego zbioru danych,
 - Dobre radzenie sobie z brakami danych,
 - Nie wymaga normalizacji ani standaryzacji zbioru danych,
 - Łączenie wielu drzew decyzyjnych zmniejsza ryzyko nadmiernego dopasowania modelu.
 
-WADY:
+### WADY:
 - Możliwe duże koszta obliczeniowe, zwłaszcza przy dużej liczbie drzew,
 - Dosyć trudna interpretacja modelu.
 
