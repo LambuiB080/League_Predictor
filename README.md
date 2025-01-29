@@ -8,7 +8,7 @@ Projekt może posłużyć do pomocy w obstawianiu zakładów bukmacherskich.
 
 W koncepcji przewidywania meczy należy rozważyć 3 koncepcje:
 
-_Regresja logistyczna_ - algorytm uczenia maszynowego używany do zadań klasyfikacyjnych. Celem jest określenie prawdopodobieństwa, że dane zdarzenie (u nas - wynik meczu) należy do danej klasy (zwycięstwo, remis, porażka). W tym celu wykorzystywana jest tzw. funkcja sigmoidalna - przyjmuje ona dane wejściowe jako zmienne niezależne a wynikiem jej działania jest wartość prawdopodobieństwa (zmienna zależna) między 0 a 1. Stosując ten algorytm, konieczne jest spełnienie kilku założeń takich jak: niezależne obserwacje, duża próbka danych, brak wartości "odstających" od reszty i liniowa zależność między zmiennymi niezależnymi i funkcją logitową. Algorytm realizuje się w trzech krokach:
+_Regresja logistyczna_[1] - algorytm uczenia maszynowego używany do zadań klasyfikacyjnych. Celem jest określenie prawdopodobieństwa, że dane zdarzenie (u nas - wynik meczu) należy do danej klasy (zwycięstwo, remis, porażka). W tym celu wykorzystywana jest tzw. funkcja sigmoidalna - przyjmuje ona dane wejściowe jako zmienne niezależne a wynikiem jej działania jest wartość prawdopodobieństwa (zmienna zależna) między 0 a 1. Stosując ten algorytm, konieczne jest spełnienie kilku założeń takich jak: niezależne obserwacje, duża próbka danych, brak wartości "odstających" od reszty i liniowa zależność między zmiennymi niezależnymi i funkcją logitową. Algorytm realizuje się w trzech krokach:
 1. Wyznaczenie funkcji liniowej z zależnej od zbioru cech wejściowych X za pomocą regresji liniowej. Kluczowe są tu wagi przypisywane do każdej cechy.
 2. Przekształcenie funkcji z z użyciem funkcji sigmoidalnej, która przekształca funkcję ciągłą na wartość prawdopodobieństwa.
 3. Obliczenie funkcji kosztu.
@@ -25,7 +25,7 @@ _Regresja logistyczna_ - algorytm uczenia maszynowego używany do zadań klasyfi
 - Gorsze działanie dla silnie skorelowanych cech
 - Gorsze radzenie sobie z dużą liczbą cech.
 
-_Gradient Boosting_ - algorytm trenuje model sekwencyjnie (nazywamy to boostingiem) - każdy nowy model próbuje poprawić poprzedni m.in. zminimalizować funkcję strat. W pierwszym kroku obliczany jest błąd, czyli różnica między wartościami rzeczywistymi a przewidywaniami modelu. Następnie nowy model jest trenowany - przewiduje przy tym przyszły błąd i tym samym uczy się poprawiać błędy poprzedniego modelu. Prognozy z każdej iteracji są dodawane do dotychczasowego modelu. Proces ten trwa do momentu, gdy błąd przestanie się zmniejszać lub zostanie osiągnięta zadana liczba iteracji.
+_Gradient Boosting_[2] - algorytm trenuje model sekwencyjnie (nazywamy to boostingiem) - każdy nowy model próbuje poprawić poprzedni m.in. zminimalizować funkcję strat. W pierwszym kroku obliczany jest błąd, czyli różnica między wartościami rzeczywistymi a przewidywaniami modelu. Następnie nowy model jest trenowany - przewiduje przy tym przyszły błąd i tym samym uczy się poprawiać błędy poprzedniego modelu. Prognozy z każdej iteracji są dodawane do dotychczasowego modelu. Proces ten trwa do momentu, gdy błąd przestanie się zmniejszać lub zostanie osiągnięta zadana liczba iteracji.
 
 ### ZALETY:
 - wysoka dokładność - wyniki są lepsze niż dla regresji logistycznej,
@@ -37,7 +37,7 @@ _Gradient Boosting_ - algorytm trenuje model sekwencyjnie (nazywamy to boostingi
 - Wrażliwość na wartości odstające
 - Wymaga dobrego dostrojenia parametrów.
 
-_Random Forest_ - algorytm wykorzystujący zbiór drzew decyzyjnych, które współpracują ze sobą, aby tworzyć przewidywania. To właśnie on został wybrany w realizowanym projekcie.  W pierwszym jego kroku, na podstawie losowych próbek danych, budowane są drzewa decyzyjne. Ponieważ trenowane są one na różnych podzbiorach danych, każde z nich jest unikalne. Następnie każde z nich dokonuje prognozy wyniku na podstawie otrzymanych danych. Przy dokonywaniu ostatecznej prognozy łączone są wyniki ze wszystkich drzew. W przypadku zadań klasyfikacyjnych ostateczna prognoza to ta, którą przewiduje większość drzew. Z kolei dla zadania regresji jest nią średnia prognoz ze wszystkich drzew. Losowość próbek danych i doboru funkcji powoduje, że wyniki działania algorytmu są dokładniejsze i bardziej wiarygodne.
+_Random Forest_[3] - algorytm wykorzystujący zbiór drzew decyzyjnych, które współpracują ze sobą, aby tworzyć przewidywania. To właśnie on został wybrany w realizowanym projekcie.  W pierwszym jego kroku, na podstawie losowych próbek danych, budowane są drzewa decyzyjne. Ponieważ trenowane są one na różnych podzbiorach danych, każde z nich jest unikalne. Następnie każde z nich dokonuje prognozy wyniku na podstawie otrzymanych danych. Przy dokonywaniu ostatecznej prognozy łączone są wyniki ze wszystkich drzew. W przypadku zadań klasyfikacyjnych ostateczna prognoza to ta, którą przewiduje większość drzew. Z kolei dla zadania regresji jest nią średnia prognoz ze wszystkich drzew. Losowość próbek danych i doboru funkcji powoduje, że wyniki działania algorytmu są dokładniejsze i bardziej wiarygodne.
 
 ### ZALETY:
 - Dokładne prognozy nawet dla dużego zbioru danych,
@@ -54,8 +54,7 @@ _Random Forest_ - algorytm wykorzystujący zbiór drzew decyzyjnych, które wsp�
 
 Wybrany został algorytm RFS ponieważ wady i zalety zestawionych metod przedstawiały RFS w najlepszym świetle,
 biorąc pod uwagę nieliniowość, ryzyko przeuczenia, oraz duży zbiór cech połączony z ograniczoną liczbą danych do nauki modelu.
-Wpływ miało również przeprowadzone badanie, z którego wynika wyższość modelu RFS nad Gradient Boostingiem i C5.0. 
-Link do artykułu: https://www.mecs-press.org/ijisa/ijisa-v11-n7/IJISA-V11-N7-3.pdf
+Wpływ miało również przeprowadzone badanie, z którego wynika wyższość modelu RFS nad Gradient Boostingiem i C5.0. [4]
 
 
 Do przeprowadzenia predykcji meczu, potrzebne są dane wejściowe:
@@ -106,6 +105,7 @@ Program zawiera:
 Program zapobiega błędom, jednak aby działał poprawnie potrzebne jest połączenie internetowe (do pobrania bazy danych).
 
 ŹRÓDŁA:
-- https://www.geeksforgeeks.org/understanding-logistic-regression/
-- https://www.geeksforgeeks.org/ml-gradient-boosting/
-- https://www.geeksforgeeks.org/random-forest-algorithm-in-machine-learning/
+- [1]https://www.geeksforgeeks.org/understanding-logistic-regression/
+- [2]https://www.geeksforgeeks.org/ml-gradient-boosting/
+- [3]https://www.geeksforgeeks.org/random-forest-algorithm-in-machine-learning/
+- [4]https://www.mecs-press.org/ijisa/ijisa-v11-n7/IJISA-V11-N7-3.pdf
