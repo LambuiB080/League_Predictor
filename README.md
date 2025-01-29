@@ -19,6 +19,7 @@ Zalety:
 - Prostowa i łatwa interpretacja
 - Dobrze działa na małych i średnich zbiorach danych
 - Możliwość skalowania do większych problemów (np. Softmax regression)
+
 Wady: 
 - Wrażliwość na wartości odstające
 - Gorsze działanie dla silnie skorelowanych cech
