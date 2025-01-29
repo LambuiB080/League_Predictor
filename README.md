@@ -117,3 +117,6 @@ Program zawiera:
 + intuicyjne menu które wyraźnie wskazuje, co się dzieje w programie.
 
 Program zapobiega błędom, jednak aby działał poprawnie potrzebne jest połączenie internetowe (do pobrania bazy danych).
+
+ŹRÓDŁA:
+- https://www.geeksforgeeks.org/understanding-logistic-regression/?utm_source=chatgpt.com
