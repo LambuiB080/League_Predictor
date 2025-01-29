@@ -119,4 +119,4 @@ Program zawiera:
 Program zapobiega błędom, jednak aby działał poprawnie potrzebne jest połączenie internetowe (do pobrania bazy danych).
 
 ŹRÓDŁA:
-- https://www.geeksforgeeks.org/understanding-logistic-regression/?utm_source=chatgpt.com
+- https://www.geeksforgeeks.org/understanding-logistic-regression/
