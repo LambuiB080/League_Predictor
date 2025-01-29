@@ -37,25 +37,17 @@ WADY:
 - Wrażliwość na wartości odstające
 - Wymaga dobrego dostrojenia parametrów.
 
-_Random Forest_ - Został wybrany jako rozwiązanie tego problemu.
-Wybrana koncepcja nosi nazwę Random Forestx (Lasy Losowe). Metoda polega na budowaniu drzew decyzyjnych. Drzewa decyzyjne reprezentują schematycznie proces podejmowania decyzji
-pod pewnymi warunkami. Algorytm dąży do tego, aby wyodrębnić poszczególne klasy poprzez przechodzenie przez konkretne warunki. Idealne drzewo decyzyjne po danej sekwencji warunków
-zawiera tylko jedną klase wyboru w "liściu". Algorytm Random Forests (RFS) polega na stworzeniu n drzew decyzyjnych. Dla każdego drzewa wybieramy losowo X punktów danych
-ze zbioru uczącego i Y cech. Dla takiego drzewa tworzone jest niezależne drzewo decyzyjne. Następnie każde drzewo dostaje losową liczbę obserwacji ze zwracaniem. 
-Każde ma także ten sam zbiór wejściowych cech, ale ostatecznie wybierany jest inny wylosowany podzbiór cech. Na końcu dokonujmy prognozowania dla każdego drzewa zbudowanego
-w pierwszym etapie, a ostateczny wynik (w przypadku klasyfikacji) jest rozpatrywany na podstawie głosowania większościowego. W przypadku regresji możemy wziąć na przykład
-przewidywaną średnią wartość ze wszystkich drzew.
+_Random Forest_ - algorytm wykorzystujący zbiór drzew decyzyjnych, które współpracują ze sobą, aby tworzyć przewidywania. To właśnie on został wybrany w realizowanym projekcie.  W pierwszym jego kroku, na podstawie losowych próbek danych, budowane są drzewa decyzyjne. Ponieważ trenowane są one na różnych podzbiorach danych, każde z nich jest unikalne. Następnie każde z nich dokonuje prognozy wyniku na podstawie otrzymanych danych. Przy dokonywaniu ostatecznej prognozy łączone są wyniki ze wszystkich drzew. W przypadku zadań klasyfikacyjnych ostateczna prognoza to ta, którą przewiduje większość drzew. Z kolei dla zadania regresji jest nią średnia prognoz ze wszystkich drzew. Losowość próbek danych i doboru funkcji powoduje, że wyniki działania algorytmu są dokładniejsze i bardziej wiarygodne.
 
-#### Zalety RFS:
-- Lasy losowe są bardzo skuteczne w wielu zadaniach, takich jak klasyfikacja i regresja, zwłaszcza gdy dane mają skomplikowane zależności i dużo szumu.
-- Dzięki losowemu wybieraniu próbek danych i cech, las losowy zapobiega przeuczeniu, które często występuje w pojedynczych drzewach decyzyjnych.
-- Lasy losowe mogą dobrze działać nawet wtedy, gdy zestaw danych zawiera bardzo dużo zmiennych.
-- Las losowy automatycznie oblicza, jak ważna jest każda cecha w przewidywaniu wyniku, co pomaga w analizie i interpretacji danych.
-- Koncepcja nie zakłada liniowej zależności między cechami a wynikami, co czyni ją uniwersalną w przypadku danych nieliniowych.
+ZALETY:
+- Dokładne prognozy nawet dla dużego zbioru danych,
+- Dobre radzenie sobie z brakami danych,
+- Nie wymaga normalizacji ani standaryzacji zbioru danych,
+- Łączenie wielu drzew decyzyjnych zmniejsza ryzyko nadmiernego dopasowania modelu.
 
-#### Wady RFS:
-- Trudno jest interpretować wyniki lasów losowych, ponieważ są one wynikiem złożonej agregacji wielu drzew decyzyjnych. Nie można wyciągać prostych wniosków, jak w przypadku pojedynczego drzewa decyzyjnego.
-- Trening lasów losowych może być czasochłonny i wymaga dużo pamięci, zwłaszcza gdy liczba drzew i cech jest bardzo duża.
+WADY:
+- Możliwe duże koszta obliczeniowe, zwłaszcza przy dużej liczbie drzew,
+- Dosyć trudna interpretacja modelu.
 
 
 **3.Opis wybranej koncepcji**
