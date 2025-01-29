@@ -120,3 +120,4 @@ Program zapobiega błędom, jednak aby działał poprawnie potrzebne jest połą
 
 ŹRÓDŁA:
 - https://www.geeksforgeeks.org/understanding-logistic-regression/
+- https://www.geeksforgeeks.org/ml-gradient-boosting/
