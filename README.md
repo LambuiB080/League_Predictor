@@ -25,22 +25,17 @@ Wady:
 - Gorsze działanie dla silnie skorelowanych cech
 - Gorsze radzenie sobie z dużą liczbą cech.
 
-_Gradient Boosting_ - Gradient boosting polega na budowaniu kolejnych modeli iteracyjnie, które poprawiają błędy poprzednich modeli.
-W każdym kroku obliczany jest błąd aktualnego modelu (czyli różnica między prawdziwą wartością a wartością przewidywaną).
-W każdym kroku tworzony jest też nowy model, który próbuje przewidzieć pozostały błąd poprzedniego modelu.
-Nowe modele uczą się, jak "przesuwać" przewidywania w kierunku rzeczywistych wartości.
-Wyniki nowego modelu są dodawane do poprzedniego modelu, ale z pewnym "współczynnikiem uczenia" (η), który kontroluje, jak duży wpływ mają nowe modele na końcowy wynik.
-Proces ten jest powtarzany wielokrotnie, a każdy kolejny model stara się poprawić błędy poprzedniego.
-Ostateczny wynik to suma wkładów wszystkich modeli.
+_Gradient Boosting_ - algorytm trenuje model sekwencyjnie (nazywamy to boostingiem) - każdy nowy model próbuje poprawić poprzedni m.in. zminimalizować funkcję strat. W pierwszym kroku obliczany jest błąd, czyli różnica między wartościami rzeczywistymi a przewidywaniami modelu. Następnie nowy model jest trenowany - przewiduje przy tym przyszły błąd i tym samym uczy się poprawiać błędy poprzedniego modelu. Prognozy z każdej iteracji są dodawane do dotychczasowego modelu. Proces ten trwa do momentu, gdy błąd przestanie się zmniejszać lub zostanie osiągnięta zadana liczba iteracji.
 
-####  Zalety:
-- Bardzo wysoka dokładność, szczególnie dla dużych i złożonych danych.
-- Radzi sobie z nieliniowymi zależnościami między danymi.
+ZALETY:
+- wysoka dokładność - wyniki są lepsze niż dla regresji logistycznej,
+- obsługa różnych typów danych,
+- dobra odporność na przeuczenie.
 
-#### Wady:
-- Wysokie zapotrzebowanie na moc obliczeniową, szczególnie przy dużych danych.
-- Wymaga strojenia wielu hiperparametrów.
-- Modele są trudne do interpretacji, ponieważ składają się z wielu małych modeli.
+WADY:
+- wysoka złożoność obliczeniowa,
+- Wrażliwość na wartości odstające
+- Wymaga dobrego dostrojenia parametrów.
 
 _Random Forest_ - Został wybrany jako rozwiązanie tego problemu.
 Wybrana koncepcja nosi nazwę Random Forestx (Lasy Losowe). Metoda polega na budowaniu drzew decyzyjnych. Drzewa decyzyjne reprezentują schematycznie proces podejmowania decyzji
