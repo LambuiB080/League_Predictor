@@ -1,3 +1,5 @@
+Błażej Lambui, Łukasz Majchrzak, Grupa pn 8.00
+
 **1. Opis rzeczywistego problemu.**
 
 Projekt League_Predictor skupia się na przewidywaniu meczy ligi angielskiej Premier League. W projekcie utworzony został model przewidujący mecze na podstawie wcześniejszych
