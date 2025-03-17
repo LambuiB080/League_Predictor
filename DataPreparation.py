@@ -52,7 +52,7 @@ class DataPreparation:
         df = self._delete_columns(df)
         df = self._add_columns(df)
         df = self._replace_names_with_numbers(df)
-        return df, df
+        return df, df.copy()
 
     def calculate_data_for_model(self, home_team=None, away_team=None):
         if home_team is not None and away_team is not None: x_teams_as_numbers = [home_team, away_team]
@@ -188,7 +188,7 @@ class DataPreparation:
                 return team
 
     def calculate_data_for_inserted_teams(self, home_team, away_team):
-        self.df = self.df_copy
+        self.df = self.df_copy.copy()
         self.df.loc[len(self.df)] = {'Date': date.today().strftime("%d/%m/%Y"), 'HomeTeam': home_team, 'AwayTeam': away_team, 'PH5H': 0.0, 'PA5A': 0.0}
         self.calculate_data_for_model(home_team=home_team, away_team= away_team)
 
